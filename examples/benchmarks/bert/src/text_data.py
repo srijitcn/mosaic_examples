@@ -140,8 +140,9 @@ class StreamingTextDataset(StreamingDataset):
             download_timeout=download_timeout,
             validate_hash=validate_hash,
             keep_zip=keep_zip,
-            keep_raw=keep_raw,
-            samples_per_epoch=samples_per_epoch,
+            #keep_raw=keep_raw,
+            #samples_per_epoch=samples_per_epoch,
+            
             predownload=predownload,
             partition_algo=partition_algo,
             num_canonical_nodes=num_canonical_nodes,

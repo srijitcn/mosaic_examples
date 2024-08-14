@@ -171,7 +171,8 @@ class NoConcatDataset(IterableDataset):
         self.hf_dataset = hf_datasets.load_dataset(path=dataset_name,
                                                    name=data_subset,
                                                    split=split,
-                                                   streaming=True)
+                                                   streaming=True,
+                                                   trust_remote_code=True)
 
     def __iter__(self) -> Iterable[Dict[str, bytes]]:
         for sample in self.hf_dataset:
